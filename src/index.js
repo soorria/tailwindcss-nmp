@@ -30,8 +30,8 @@ const nmpPlugin = plugin(({ matchUtilities, theme }) => {
   })
 
   const all = value => ({
-    ...x(value),
-    ...y(value),
+    margin: marginValue(value),
+    padding: value,
   })
 
   matchUtilities(

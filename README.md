@@ -1,6 +1,6 @@
 # tailwindcss-nmp
 
-Add equal **N**egative **Margin** and **P**adding to an element. Has the same variantions as the margin and padding utilities:
+Add equal **N**egative **Margin** and **P**adding to an element. Has the same variations as the margin and padding utilities:
 
 - `nmp` - top, right, bottom, and left
 - `nmpx` - right, and left
@@ -41,13 +41,20 @@ module.exports = {
 You can use the variant added by this plugin just like you would `hover:` or `focus:`:
 
 ```html
-<button className="hocus:text-red-700">Click Me!</button>
+<div className="nmp-8">I'm a box</div>
+<div className="nmpx-4"></div>
 ```
 
 ```css
-.hocus\:text-red-700:hover,
-.hocus\:text-red-700:focus {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity));
+.nmp-8 {
+  margin: calc(1rem * (-1));
+  padding: 1rem;
+}
+
+.nmpx-4 {
+  margin-left: calc(1rem * (-1));
+  padding-left: 1rem;
+  margin-right: calc(1rem * (-1));
+  padding-right: 1rem;
 }
 ```
